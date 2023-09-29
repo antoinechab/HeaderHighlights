@@ -1,0 +1,33 @@
+<style>
+    {literal}
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .grid-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .big {
+        grid-row: 1 / span 2;
+    }
+
+    .small {
+        grid-column: span 1;
+    }
+
+    .big a img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .small a img {
+        height: auto;
+        max-width: 50%;
+    }
+
+    {/literal}
+</style>

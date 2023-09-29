@@ -1,0 +1,26 @@
+{block name="after-admin-css"}
+    {include file="css/carousel.css.html"}
+{/block}
+
+{ifloop rel="header_highlights_loop"}
+<section class="header-highlights-image-container">
+    <div id="header-highlights-image" class="header-highlights-image slide" data-ride="header-highlights-image">
+        <div class="header-highlights-image-wrapper">
+            <div class="grid-container">
+                {loop type="header_highlights_loop" name="header_highlights_loop" locale="$locale" display_type="desktop"}
+                <figure class="grid-item {if $IMAGE_BLOCK == "1"}big{else}small{/if}">
+                    <a href="{$URL|default:'#'}">
+                        <img src="{$IMAGE_URL}" alt="header-highlights-image-{$ID}">
+                    </a>
+
+                    <div class="header-highlights-image-caption">
+                        {if $TITLE}<h3>{$TITLE}</h3>{/if}
+                        {if $CATCHPHRASE}{$CATCHPHRASE nofilter}{/if}
+                    </div>
+                </figure>
+                {/loop}
+            </div>
+        </div>
+    </div>
+</section><!-- #carousel -->
+{/ifloop}
